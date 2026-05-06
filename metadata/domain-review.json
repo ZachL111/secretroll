@@ -1,0 +1,73 @@
+{
+  "repo": "secretroll",
+  "language": "Swift",
+  "category": "Platform security",
+  "goal": "Plan secret rotation windows and audit-friendly stale credential reports.",
+  "review_model": {
+    "terms": [
+      "rotation gap",
+      "stale secret",
+      "audit width",
+      "owner drift"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "rotation gap",
+      "signal": 42,
+      "slack": 35,
+      "drag": 9,
+      "confidence": 53,
+      "score": 145,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "stale secret",
+      "signal": 48,
+      "slack": 34,
+      "drag": 24,
+      "confidence": 84,
+      "score": 142,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "audit width",
+      "signal": 56,
+      "slack": 53,
+      "drag": 30,
+      "confidence": 92,
+      "score": 167,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "owner drift",
+      "signal": 81,
+      "slack": 46,
+      "drag": 14,
+      "confidence": 94,
+      "score": 260,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "rotation gap",
+      "signal": 71,
+      "slack": 43,
+      "drag": 22,
+      "confidence": 57,
+      "score": 176,
+      "lane": "ship"
+    }
+  ]
+}

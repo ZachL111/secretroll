@@ -1,0 +1,6 @@
+name,focus,signal,slack,drag,confidence,score,lane
+baseline,rotation gap,42,35,9,53,145,ship
+stress,stale secret,48,34,24,84,142,ship
+edge,audit width,56,53,30,92,167,ship
+recovery,owner drift,81,46,14,94,260,ship
+stale,rotation gap,71,43,22,57,176,ship
